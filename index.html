@@ -4,221 +4,615 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZEnergy - Minden, ami villanyszerelés</title>
+<title>ZEnergy | Modern Villanyszerelés</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-body{
-font-family:'Montserrat',sans-serif;
-background:#0f0f0f;
-color:white;
-line-height:1.6;
+html{
+scroll-behavior:smooth;
 }
 
-header{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url('hero.jpg') center/cover no-repeat;
+body{
+font-family:'Montserrat',sans-serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#ff950015 0%,transparent 70%);
+top:-200px;
+right:-150px;
+z-index:-1;
+filter:blur(30px);
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,149,0,0.1);
+}
+
+.nav-container{
+max-width:1250px;
+margin:auto;
+padding:16px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:1.7rem;
+color:#ff9500;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+font-size:0.95rem;
+}
+
+.nav-links a:hover{
+color:#ff9500;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
+padding:120px 20px 80px;
+position:relative;
 text-align:center;
-padding:20px;
 }
 
-.hero{
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.92)),
+url('https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?q=80&w=1600&auto=format&fit=crop') center/cover;
+z-index:-2;
+}
+
+.hero-content{
 max-width:900px;
+width:100%;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(255,149,0,0.08);
+border:1px solid rgba(255,149,0,0.2);
+color:#ffb347;
+font-weight:600;
+margin-bottom:25px;
+font-size:0.9rem;
 }
 
 .hero h1{
-font-size:4rem;
-color:#ff9d00;
-margin-bottom:20px;
+font-size:clamp(2.4rem,8vw,5.5rem);
+line-height:1.05;
+margin-bottom:25px;
 font-weight:800;
+text-transform:uppercase;
+}
+
+.hero h1 span{
+display:block;
+color:#ff9500;
+text-shadow:0 0 25px rgba(255,149,0,0.35);
 }
 
 .hero p{
-font-size:1.4rem;
-margin-bottom:30px;
+font-size:clamp(1rem,2vw,1.25rem);
+line-height:1.8;
+color:#d4d4d4;
+max-width:750px;
+margin:auto;
+margin-bottom:40px;
+padding:0 5px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:16px 34px;
-background:#ff9d00;
-color:black;
+padding:17px 30px;
+border-radius:16px;
 font-weight:700;
-border-radius:12px;
 text-decoration:none;
 transition:0.3s;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+min-width:220px;
 }
 
-.btn:hover{
-transform:translateY(-3px);
-background:#ffb53d;
+.btn-primary{
+background:linear-gradient(135deg,#ff9500,#ff6a00);
+color:black;
+box-shadow:0 12px 30px rgba(255,149,0,0.2);
 }
+
+.btn-primary:hover{
+transform:translateY(-4px);
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,0.12);
+background:rgba(255,255,255,0.03);
+color:white;
+}
+
+.btn-secondary:hover{
+border-color:#ff9500;
+color:#ff9500;
+}
+
+/* SECTIONS */
 
 section{
 padding:90px 20px;
 }
 
 .container{
-max-width:1200px;
+max-width:1250px;
 margin:auto;
 }
 
 .section-title{
-font-size:2.5rem;
-margin-bottom:50px;
-color:#ff9d00;
 text-align:center;
+margin-bottom:55px;
 }
 
-.services{
+.section-title h2{
+font-size:clamp(2rem,5vw,3.4rem);
+margin-bottom:15px;
+}
+
+.section-title span{
+color:#ff9500;
+}
+
+.section-title p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#c7c7c7;
+font-size:1rem;
+}
+
+/* SERVICES */
+
+.services-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
-.card{
-background:#1a1a1a;
+.service-card{
+background:linear-gradient(180deg,#161616,#0d0d0d);
+border:1px solid rgba(255,149,0,0.08);
 padding:30px;
-border-radius:20px;
-border:1px solid rgba(255,157,0,0.2);
+border-radius:24px;
 transition:0.3s;
 }
 
-.card:hover{
+.service-card:hover{
 transform:translateY(-6px);
-border-color:#ff9d00;
+border-color:#ff9500;
+box-shadow:0 15px 40px rgba(255,149,0,0.12);
 }
 
-.card h3{
-color:#ff9d00;
-margin-bottom:15px;
+.service-icon{
+font-size:2.4rem;
+margin-bottom:20px;
 }
 
-.image-section{
-background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-url('service.jpg') center/cover no-repeat;
+.service-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+color:#ff9500;
+line-height:1.4;
+}
+
+.service-card p{
+line-height:1.8;
+color:#d0d0d0;
+font-size:0.98rem;
+}
+
+/* WHY */
+
+.why{
+background:#0b0b0b;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.why-image img{
+width:100%;
+border-radius:28px;
+display:block;
+}
+
+.feature-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.feature-item{
+display:flex;
+gap:16px;
+padding:20px;
+background:rgba(255,255,255,0.03);
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.check{
+min-width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+background:linear-gradient(135deg,#ff9500,#ff6a00);
+font-weight:800;
+color:black;
+}
+
+.feature-item h4{
+margin-bottom:6px;
+font-size:1.05rem;
+}
+
+.feature-item p{
+color:#cfcfcf;
+line-height:1.7;
+font-size:0.95rem;
+}
+
+/* CONTACT */
+
+.contact-box{
+padding:60px 25px;
+background:linear-gradient(145deg,#171717,#0e0e0e);
+border-radius:30px;
 text-align:center;
+border:1px solid rgba(255,149,0,0.1);
 }
 
-.image-section .box{
-max-width:850px;
+.contact-box h2{
+font-size:clamp(2rem,5vw,3.3rem);
+margin-bottom:20px;
+}
+
+.contact-box p{
+max-width:650px;
 margin:auto;
-background:rgba(0,0,0,0.55);
-padding:40px;
-border-radius:24px;
-backdrop-filter: blur(6px);
-}
-
-.contact{
-text-align:center;
+line-height:1.8;
+color:#d0d0d0;
+margin-bottom:35px;
 }
 
 .phone{
-font-size:3rem;
+font-size:clamp(2rem,7vw,4rem);
 font-weight:800;
-color:#ff9d00;
-margin:20px 0;
+color:#ff9500;
+margin-bottom:12px;
+line-height:1.2;
 }
+
+.email{
+margin-bottom:35px;
+color:#d4d4d4;
+font-size:1rem;
+word-break:break-word;
+}
+
+/* FOOTER */
 
 footer{
-padding:30px;
+padding:35px 20px;
 text-align:center;
-background:#080808;
-color:#aaa;
+color:#909090;
+border-top:1px solid rgba(255,255,255,0.05);
+font-size:0.9rem;
 }
 
-@media(max-width:768px){
-.hero h1{
-font-size:2.5rem;
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
 }
 
-.hero p{
-font-size:1.1rem;
+.hero{
+padding-top:110px;
 }
 
-.phone{
-font-size:2rem;
+.why-grid{
+grid-template-columns:1fr;
 }
+
+.why-image{
+order:-1;
 }
+
+}
+
+@media(max-width:600px){
+
+section{
+padding:70px 16px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+min-width:unset;
+}
+
+.service-card{
+padding:25px;
+}
+
+.contact-box{
+padding:50px 20px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<header>
-<div class="hero">
-<h1>ZEnergy</h1>
-<p>Minden, ami villanyszerelés – gyorsan, szakszerűen, szabvány szerint.</p>
-<a class="btn" href="tel:+36306565052">Hívás most</a>
-</div>
-</header>
+<nav>
+<div class="nav-container">
 
-<section>
-<div class="container">
-<h2 class="section-title">Szolgáltatások</h2>
+<div class="logo">ZENERGY</div>
 
-<div class="services">
-<div class="card">
-<h3>Szabványos fogyasztásmérőhely</h3>
-<p>Lakossági és ipari mérőhelyek kialakítása és bővítése teljes ügyintézéssel.</p>
+<div class="nav-links">
+<a href="#services">Szolgáltatások</a>
+<a href="#why">Miért mi?</a>
+<a href="#contact">Kapcsolat</a>
 </div>
 
-<div class="card">
-<h3>Villamos biztonsági felülvizsgálat</h3>
-<p>Eladó vagy kiadó ingatlanok kötelező VBF vizsgálata Győr és környékén.</p>
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="badge">
+⚡ Gyorsan • Szakszerűen • Szabvány szerint
 </div>
 
-<div class="card">
-<h3>E.ON / MVM ügyintézés</h3>
-<p>Teljes körű ügyintézés rövid határidővel és korrekt árakkal.</p>
+<h1>
+Minden, ami
+<span>Villanyszerelés</span>
+</h1>
+
+<p>
+Lakossági és ipari villanyszerelés, szabványos fogyasztásmérőhely kialakítás,
+villamos biztonsági felülvizsgálat és teljes körű E.ON / MVM ügyintézés
+Győrben és környékén.
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:+36306565052" class="btn btn-primary">
+📞 Hívás most
+</a>
+
+<a href="#services" class="btn btn-secondary">
+Szolgáltatások
+</a>
+
 </div>
 
-<div class="card">
-<h3>Hibakeresés és javítás</h3>
-<p>Gyors hibaelhárítás és villamos hálózatok javítása megbízhatóan.</p>
 </div>
-</div>
-</div>
+
 </section>
 
-<section class="image-section">
-<div class="box">
-<h2 class="section-title">Miért válassz minket?</h2>
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Szolgáltatás<span>aink</span></h2>
+
 <p>
-✔ Gyors kiszállás<br><br>
-✔ Precíz kivitelezés<br><br>
-✔ Modern megoldások<br><br>
-✔ Tapasztalat és megbízhatóság<br><br>
-✔ Rövid határidő, korrekt árak
+Modern megoldások lakossági és ipari ügyfelek számára.
+Gyors kivitelezés, korrekt árak és teljes körű ügyintézés.
 </p>
 </div>
+
+<div class="services-grid">
+
+<div class="service-card">
+<div class="service-icon">⚡</div>
+<h3>Szabványos fogyasztásmérőhely</h3>
+<p>
+Lakossági és ipari mérőhelyek kialakítása,
+bővítése és szabványosítása rövid határidővel.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🏠</div>
+<h3>Villamos biztonsági felülvizsgálat</h3>
+<p>
+Kötelező VBF vizsgálat eladó és kiadó ingatlanokhoz.
+Teljes dokumentációval.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🔌</div>
+<h3>E.ON / MVM ügyintézés</h3>
+<p>
+Teljes körű ügyintézés szolgáltatók felé,
+hogy neked semmivel ne kelljen foglalkoznod.
+</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🛠</div>
+<h3>Hibakeresés és javítás</h3>
+<p>
+Gyors és precíz hibafeltárás,
+villamos hálózatok javítása és korszerűsítése.
+</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="contact">
+<section class="why" id="why">
+
 <div class="container">
-<h2 class="section-title">Kapcsolat</h2>
 
-<div class="phone">0630 656 5052</div>
+<div class="why-grid">
 
-<p>Email: gyeneizoltan@gmail.com</p>
-<br>
-<a class="btn" href="tel:+36306565052">Hívás indítása</a>
+<div class="feature-list">
+
+<div class="feature-item">
+<div class="check">✓</div>
+<div>
+<h4>Gyors kiszállás</h4>
+<p>Rövid határidővel dolgozunk Győrben és környékén.</p>
 </div>
+</div>
+
+<div class="feature-item">
+<div class="check">✓</div>
+<div>
+<h4>Szabvány szerinti kivitelezés</h4>
+<p>Minden munkát aktuális előírások alapján végzünk.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="check">✓</div>
+<div>
+<h4>Korrekt árak</h4>
+<p>Átlátható és korrekt árazás rejtett költségek nélkül.</p>
+</div>
+</div>
+
+<div class="feature-item">
+<div class="check">✓</div>
+<div>
+<h4>Tapasztalat és megbízhatóság</h4>
+<p>Precíz kivitelezés és ügyfélközpontú hozzáállás.</p>
+</div>
+</div>
+
+</div>
+
+<div class="why-image">
+<img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>Kapcsolat</h2>
+
+<p>
+Kérj ajánlatot vagy érdeklődj telefonon.
+Gyors válasz és megbízható kivitelezés.
+</p>
+
+<div class="phone">
+0630 656 5052
+</div>
+
+<div class="email">
+✉ gyeneizoltan@gmail.com
+</div>
+
+<a href="tel:+36306565052" class="btn btn-primary">
+📞 Hívás indítása
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 <footer>
-© 2025 ZEnergy – Minden ami villanyszerelés
+© 2025 ZEnergy – Minden, ami villanyszerelés
 </footer>
 
 </body>
