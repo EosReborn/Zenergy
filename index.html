@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZEnergy - Minden, ami villanyszerelés</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#0f0f0f;
+color:white;
+line-height:1.6;
+}
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url('hero.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero{
+max-width:900px;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ff9d00;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.hero p{
+font-size:1.4rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 34px;
+background:#ff9d00;
+color:black;
+font-weight:700;
+border-radius:12px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#ffb53d;
+}
+
+section{
+padding:90px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:50px;
+color:#ff9d00;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,157,0,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#ff9d00;
+}
+
+.card h3{
+color:#ff9d00;
+margin-bottom:15px;
+}
+
+.image-section{
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+url('service.jpg') center/cover no-repeat;
+text-align:center;
+}
+
+.image-section .box{
+max-width:850px;
+margin:auto;
+background:rgba(0,0,0,0.55);
+padding:40px;
+border-radius:24px;
+backdrop-filter: blur(6px);
+}
+
+.contact{
+text-align:center;
+}
+
+.phone{
+font-size:3rem;
+font-weight:800;
+color:#ff9d00;
+margin:20px 0;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#080808;
+color:#aaa;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero p{
+font-size:1.1rem;
+}
+
+.phone{
+font-size:2rem;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="hero">
+<h1>ZEnergy</h1>
+<p>Minden, ami villanyszerelés – gyorsan, szakszerűen, szabvány szerint.</p>
+<a class="btn" href="tel:+36306565052">Hívás most</a>
+</div>
+</header>
+
+<section>
+<div class="container">
+<h2 class="section-title">Szolgáltatások</h2>
+
+<div class="services">
+<div class="card">
+<h3>Szabványos fogyasztásmérőhely</h3>
+<p>Lakossági és ipari mérőhelyek kialakítása és bővítése teljes ügyintézéssel.</p>
+</div>
+
+<div class="card">
+<h3>Villamos biztonsági felülvizsgálat</h3>
+<p>Eladó vagy kiadó ingatlanok kötelező VBF vizsgálata Győr és környékén.</p>
+</div>
+
+<div class="card">
+<h3>E.ON / MVM ügyintézés</h3>
+<p>Teljes körű ügyintézés rövid határidővel és korrekt árakkal.</p>
+</div>
+
+<div class="card">
+<h3>Hibakeresés és javítás</h3>
+<p>Gyors hibaelhárítás és villamos hálózatok javítása megbízhatóan.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="image-section">
+<div class="box">
+<h2 class="section-title">Miért válassz minket?</h2>
+<p>
+✔ Gyors kiszállás<br><br>
+✔ Precíz kivitelezés<br><br>
+✔ Modern megoldások<br><br>
+✔ Tapasztalat és megbízhatóság<br><br>
+✔ Rövid határidő, korrekt árak
+</p>
+</div>
+</section>
+
+<section class="contact">
+<div class="container">
+<h2 class="section-title">Kapcsolat</h2>
+
+<div class="phone">0630 656 5052</div>
+
+<p>Email: gyeneizoltan@gmail.com</p>
+<br>
+<a class="btn" href="tel:+36306565052">Hívás indítása</a>
+</div>
+</section>
+
+<footer>
+© 2025 ZEnergy – Minden ami villanyszerelés
+</footer>
+
+</body>
+</html>
