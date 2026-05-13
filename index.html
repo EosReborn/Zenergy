@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -24,6 +23,12 @@ color:white;
 overflow-x:hidden;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
+/* MAIN */
+
 .hero-wrapper{
 padding:18px;
 }
@@ -45,7 +50,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 35px;
-background:rgba(0,0,0,0.7);
+background:rgba(0,0,0,0.72);
 backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
@@ -53,6 +58,7 @@ border-bottom:1px solid rgba(255,255,255,0.05);
 .logo{
 font-size:2.2rem;
 font-weight:900;
+line-height:1;
 }
 
 .logo span{
@@ -64,7 +70,7 @@ display:block;
 font-size:0.72rem;
 color:#6eff7d;
 letter-spacing:1px;
-margin-top:4px;
+margin-top:5px;
 }
 
 .nav-links{
@@ -98,19 +104,20 @@ box-shadow:0 12px 30px rgba(255,136,0,0.25);
 
 .hero{
 display:grid;
-grid-template-columns:1.1fr 0.9fr;
-gap:45px;
+grid-template-columns:1.2fr 0.8fr;
+gap:70px;
 align-items:center;
-padding:70px 40px 50px;
+padding:70px 50px 50px;
 background:
-linear-gradient(90deg,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.8) 45%,rgba(0,0,0,0.35) 100%),
+linear-gradient(90deg,rgba(0,0,0,0.96) 0%,rgba(0,0,0,0.92) 52%,rgba(0,0,0,0.45) 100%),
 url('https://images.unsplash.com/photo-1621847468516-1e1d4e4d37e3?q=80&w=1800&auto=format&fit=crop') center/cover;
+overflow:hidden;
 }
 
 .hero-left{
-max-width:700px;
+max-width:760px;
 position:relative;
-z-index:2;
+z-index:5;
 }
 
 .topline{
@@ -122,11 +129,13 @@ font-size:1rem;
 }
 
 .hero h1{
-font-size:clamp(3rem,7vw,6rem);
-line-height:0.95;
+font-size:clamp(3rem,6vw,5.5rem);
+line-height:0.92;
 font-weight:900;
-margin-bottom:30px;
+margin-bottom:28px;
 text-transform:uppercase;
+position:relative;
+z-index:5;
 }
 
 .hero h1 span{
@@ -179,16 +188,17 @@ transform:translateY(-4px);
 .hero-image{
 position:relative;
 z-index:1;
+display:flex;
+justify-content:flex-end;
 }
 
 .hero-image img{
 width:100%;
-max-width:620px;
-margin-left:auto;
+max-width:540px;
 border-radius:28px;
 display:block;
-box-shadow:0 30px 80px rgba(0,0,0,0.45);
 object-fit:cover;
+box-shadow:0 30px 80px rgba(0,0,0,0.45);
 }
 
 /* FEATURES */
@@ -256,6 +266,7 @@ margin-bottom:60px;
 .section-title h2{
 font-size:clamp(2rem,5vw,3.8rem);
 margin-bottom:18px;
+font-weight:900;
 }
 
 .section-title span{
@@ -359,6 +370,7 @@ border-top:1px solid rgba(255,255,255,0.05);
 
 .hero{
 grid-template-columns:1fr;
+gap:35px;
 padding:50px 30px;
 }
 
@@ -367,13 +379,16 @@ text-align:center;
 max-width:100%;
 }
 
-.hero p{
-margin:auto;
-margin-bottom:35px;
-}
-
 .hero-buttons{
 justify-content:center;
+}
+
+.hero-image{
+justify-content:center;
+}
+
+.hero-image img{
+max-width:100%;
 }
 
 .feature-box{
@@ -408,8 +423,9 @@ text-align:center;
 
 .hero{
 padding:34px 18px 30px;
+gap:28px;
 background:
-linear-gradient(rgba(0,0,0,0.92),rgba(0,0,0,0.95)),
+linear-gradient(rgba(0,0,0,0.95),rgba(0,0,0,0.97)),
 url('https://images.unsplash.com/photo-1621847468516-1e1d4e4d37e3?q=80&w=1200&auto=format&fit=crop') center/cover;
 }
 
@@ -419,10 +435,10 @@ line-height:1.5;
 }
 
 .hero h1{
-font-size:3.1rem;
+font-size:2.8rem;
 line-height:0.95;
-margin-bottom:20px;
-word-break:break-word;
+margin-bottom:18px;
+word-break:keep-all;
 }
 
 .hero p{
@@ -439,9 +455,14 @@ width:100%;
 padding:18px 20px;
 }
 
+.hero-image{
+justify-content:center;
+}
+
 .hero-image img{
-margin-top:10px;
+max-width:100%;
 border-radius:22px;
+margin-top:10px;
 }
 
 .features{
@@ -531,7 +552,8 @@ SZOLGÁLTATÁSOK →
 
 <div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop" alt="Villanyszerelő szerszámok">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop"
+alt="Villanyszerelő szerszámok">
 
 </div>
 
