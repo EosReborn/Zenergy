@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -9,14 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 body{
@@ -25,8 +23,6 @@ background:#050505;
 color:white;
 overflow-x:hidden;
 }
-
-/* WRAPPER */
 
 .hero-wrapper{
 padding:18px;
@@ -42,40 +38,33 @@ border:1px solid rgba(255,255,255,0.06);
 box-shadow:0 35px 80px rgba(0,0,0,0.55);
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 35px;
-background:rgba(0,0,0,0.78);
+padding:18px 35px;
+background:rgba(0,0,0,0.7);
 backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
-display:flex;
-flex-direction:column;
-line-height:1;
-}
-
-.logo-main{
-font-size:2.4rem;
+font-size:2.2rem;
 font-weight:900;
-letter-spacing:-1px;
 }
 
-.logo-main .z{
+.logo span{
 color:#ff8c00;
 }
 
-.logo-sub{
-margin-top:8px;
-font-size:0.75rem;
-font-weight:700;
-color:#65ff78;
+.logo small{
+display:block;
+font-size:0.72rem;
+color:#6eff7d;
 letter-spacing:1px;
+margin-top:4px;
 }
 
 .nav-links{
@@ -109,45 +98,43 @@ box-shadow:0 12px 30px rgba(255,136,0,0.25);
 
 .hero{
 display:grid;
-grid-template-columns:1.1fr 0.9fr;
-gap:70px;
+grid-template-columns:1fr 1fr;
+gap:45px;
 align-items:center;
-padding:75px 50px 65px;
+padding:70px 40px 50px;
 background:
-linear-gradient(90deg,rgba(0,0,0,0.97) 0%,rgba(0,0,0,0.94) 52%,rgba(0,0,0,0.55) 100%),
+linear-gradient(90deg,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.8) 45%,rgba(0,0,0,0.35) 100%),
 url('https://images.unsplash.com/photo-1621847468516-1e1d4e4d37e3?q=80&w=1800&auto=format&fit=crop') center/cover;
 }
 
 .hero-left{
-position:relative;
-z-index:2;
-max-width:720px;
+max-width:700px;
 }
 
 .topline{
 color:#ff8c00;
 font-weight:700;
 letter-spacing:1px;
-margin-bottom:22px;
+margin-bottom:24px;
 font-size:1rem;
 }
 
 .hero h1{
-font-size:clamp(3.2rem,6vw,6rem);
-line-height:0.92;
+font-size:clamp(3rem,7vw,6rem);
+line-height:0.95;
 font-weight:900;
-margin-bottom:28px;
+margin-bottom:30px;
 text-transform:uppercase;
 }
 
 .hero h1 span{
 display:block;
 color:#ff8c00;
-text-shadow:0 0 25px rgba(255,136,0,0.25);
+text-shadow:0 0 25px rgba(255,136,0,0.3);
 }
 
 .hero p{
-font-size:1.12rem;
+font-size:1.15rem;
 line-height:1.9;
 color:#d5d5d5;
 margin-bottom:42px;
@@ -156,7 +143,7 @@ max-width:650px;
 
 .hero-buttons{
 display:flex;
-gap:18px;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -187,16 +174,10 @@ color:white;
 transform:translateY(-4px);
 }
 
-.hero-image{
-position:relative;
-z-index:1;
-}
-
 .hero-image img{
 width:100%;
-display:block;
 border-radius:28px;
-object-fit:cover;
+display:block;
 box-shadow:0 30px 80px rgba(0,0,0,0.45);
 }
 
@@ -204,7 +185,7 @@ box-shadow:0 30px 80px rgba(0,0,0,0.45);
 
 .features{
 padding:0 35px 35px;
-margin-top:-10px;
+margin-top:-25px;
 }
 
 .feature-box{
@@ -259,27 +240,23 @@ margin:auto;
 
 .section-title{
 text-align:center;
-margin-bottom:70px;
+margin-bottom:60px;
 }
 
 .section-title h2{
-font-size:clamp(3rem,7vw,5.5rem);
-font-weight:900;
-line-height:1.05;
-margin-bottom:25px;
-letter-spacing:-2px;
+font-size:clamp(2rem,5vw,3.8rem);
+margin-bottom:18px;
 }
 
-.section-title h2 span{
+.section-title span{
 color:#ff8c00;
 }
 
 .section-title p{
-max-width:900px;
+max-width:700px;
 margin:auto;
-line-height:1.7;
+line-height:1.8;
 color:#cfcfcf;
-font-size:clamp(1rem,2vw,1.25rem);
 }
 
 .service-grid{
@@ -301,8 +278,8 @@ transform:translateY(-8px);
 border-color:#ff8c00;
 }
 
-.service-icon{
-font-size:2.3rem;
+.service-card .service-icon{
+font-size:2.4rem;
 margin-bottom:20px;
 }
 
@@ -372,13 +349,12 @@ border-top:1px solid rgba(255,255,255,0.05);
 
 .hero{
 grid-template-columns:1fr;
-padding:55px 30px 40px;
-gap:35px;
+padding:50px 30px;
 }
 
 .hero-left{
-max-width:100%;
 text-align:center;
+max-width:100%;
 }
 
 .hero p{
@@ -416,39 +392,32 @@ display:none;
 }
 
 .logo{
-align-items:center;
+font-size:1.8rem;
 text-align:center;
 }
 
-.logo-main{
-font-size:2rem;
-}
-
 .hero{
-padding:38px 20px 30px;
-gap:28px;
+padding:34px 18px 30px;
 background:
-linear-gradient(rgba(0,0,0,0.97),rgba(0,0,0,0.98)),
+linear-gradient(rgba(0,0,0,0.92),rgba(0,0,0,0.95)),
 url('https://images.unsplash.com/photo-1621847468516-1e1d4e4d37e3?q=80&w=1200&auto=format&fit=crop') center/cover;
 }
 
 .topline{
-font-size:0.82rem;
+font-size:0.85rem;
 line-height:1.5;
-margin-bottom:18px;
 }
 
 .hero h1{
-font-size:2.7rem;
+font-size:3.1rem;
 line-height:0.95;
-margin-bottom:18px;
-letter-spacing:-1px;
-word-break:keep-all;
+margin-bottom:20px;
+word-break:break-word;
 }
 
 .hero p{
-font-size:0.98rem;
-line-height:1.75;
+font-size:1rem;
+line-height:1.8;
 }
 
 .hero-buttons{
@@ -461,13 +430,13 @@ padding:18px 20px;
 }
 
 .hero-image img{
+margin-top:10px;
 border-radius:22px;
-max-height:420px;
 }
 
 .features{
 padding:0 18px 18px;
-margin-top:-5px;
+margin-top:-10px;
 }
 
 .feature-box{
@@ -479,17 +448,6 @@ padding:24px;
 padding:80px 18px;
 }
 
-.section-title h2{
-font-size:3rem;
-line-height:1.05;
-letter-spacing:-1px;
-}
-
-.section-title p{
-font-size:1rem;
-line-height:1.7;
-}
-
 .contact{
 padding:20px 18px 80px;
 }
@@ -499,6 +457,7 @@ padding:50px 20px;
 }
 
 }
+
 </style>
 </head>
 
@@ -511,8 +470,8 @@ padding:50px 20px;
 <nav>
 
 <div class="logo">
-<div class="logo-main"><span class="z">Z</span>Energy</div>
-<div class="logo-sub">MINDEN, AMI VILLANYSZERELÉS</div>
+<span>Z</span>Energy
+<small>MINDEN, AMI VILLANYSZERELÉS</small>
 </div>
 
 <div class="nav-links">
@@ -562,8 +521,7 @@ SZOLGÁLTATÁSOK →
 
 <div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop"
-alt="Villanyszerelő szerszámok">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1600&auto=format&fit=crop" alt="Villanyszerelő szerszámok">
 
 </div>
 
@@ -622,8 +580,8 @@ alt="Villanyszerelő szerszámok">
 <h2>Szolgáltatás<span>aink</span></h2>
 
 <p>
-Modern megoldások lakossági és ipari ügyfelek számára. Gyors kivitelezés,
-korrekt árak és teljes körű ügyintézés.
+Modern megoldások lakossági és ipari ügyfelek számára.
+Gyors kivitelezés, korrekt árak és teljes körű ügyintézés.
 </p>
 
 </div>
